@@ -1,0 +1,15 @@
+<head>
+	<title>My Home Page</title>
+</head>
+
+<body>
+
+	<h1>Transaction Detail</h1>
+
+	{% block content %}
+
+		<h3>{{ transaction.date|date:"Y-m-d"}} - {{ transaction.amount}} - {{ transaction.recipient}}</h3>
+
+	{% endblock %}
+
+</body>

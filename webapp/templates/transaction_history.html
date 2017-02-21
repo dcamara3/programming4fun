@@ -1,0 +1,19 @@
+<head>
+	<title>My Home Page</title>
+</head>
+
+<body>
+
+	<h1>Displaying Transaction History</h1>
+
+	{% block content %}
+
+		{% for transaction in transactions %}
+			
+			<h3>{{ transaction.date|date:"Y-m-d"}} - {{ transaction.amount}} - <a href="/webapp/{{transaction.id}}">{{ transaction.recipient}}</a></h3>
+
+		{% endfor %}
+
+	{% endblock %}
+
+</body>
